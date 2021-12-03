@@ -1,7 +1,5 @@
 /* NAVBAR STYLE*/
 
-
-
 .flex-margin{
   display: flex;
   margin-left: 42%;
@@ -9,6 +7,26 @@
 
 .me-2{
   margin-right: 0rem;
+}
+
+/* BODY-SHOP NAVBAR STYLE*/
+
+.body-shop-navbar{
+  width: 70%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: palegreen;
+}
+
+.dropdown-section {
+  margin-right: 1rem;
+}
+
+@media (max-width:767px) {
+  .dropdown-title {
+    background-color:#fff;
+  }
 }
 
 /* PRODUCT(list) STYLE*/

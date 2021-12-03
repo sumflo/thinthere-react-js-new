@@ -1,11 +1,15 @@
 import React from 'react'
 import Product from '../components/Product'
+import ShopBar from '../components/ShopBar';
 
 class BodyShop extends React.Component {
     render(){
         return (
-            <div>
-                <Product />
+            <div className="shop-container">
+                <ShopBar />
+                <div className="shop-main-container">
+                    <Product />
+                </div>
             </div>
         );
     }

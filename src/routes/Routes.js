@@ -7,7 +7,7 @@ const routes = () => /* function */ {
     return(
         <Switch>
             <Route exact path='/'>
-            <Index />
+                <Index />
             </Route>
         </Switch>
     )

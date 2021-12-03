@@ -58,3 +58,31 @@
 .data-table{
   margin: 5rem 0 5rem 0;
 }
+
+/* MY CAROUSEL STYLE*/
+
+.d-bolck{
+  display: block;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.carousel-background-1{
+  background-image: url(./assets/images/background/health.jpg);
+  background-size:cover;
+  height: 30rem;
+}
+
+.carousel-background-2{
+  background-image: url(./assets/images/background/woman.jpg);
+  background-size:cover;
+  height: 30rem;
+}
+
+.carousel-background-3{
+  background-image: url(./assets/images/background/coach.png);
+  background-size:cover;
+  height: 30rem;
+}

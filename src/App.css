@@ -1,3 +1,15 @@
+/* NAVBAR STYLE*/
+
+
+
+.flex-margin{
+  display: flex;
+  margin-left: 42%;
+}
+
+.me-2{
+  margin-right: 0rem;
+}
 
 /* PRODUCT(list) STYLE*/
 

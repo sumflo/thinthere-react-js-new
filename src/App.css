@@ -2,15 +2,17 @@
 /* PRODUCT(list) STYLE*/
 
 .product-container {
-  width: 80%;
+  width: 70%;
   margin: 5rem auto 5rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
-  row-gap: 4rem;
+  row-gap: 3rem;
+  justify-items: stretch;
+  align-items: stretch;
 }
 
 .product {
-  width: 70%;
+  width: 85%;
   margin: 0;
   padding: 1rem;
   cursor: pointer;
@@ -51,7 +53,7 @@
 /* DATA CONTAINER(tables for admin site) STYLE*/
 
 .data-table-container{
-  width: 80%;
+  width: 70%;
   margin: 5rem auto 5rem auto;
 }
 
@@ -61,18 +63,27 @@
 
 /* MY CAROUSEL STYLE*/
 
+.carousel-box{
+  width: 75%;
+  margin: 5rem auto 5rem auto;
+}
+
 .d-bolck{
   display: block;
 }
 
-.w-100{
+/* .w-100{
   width: 100%;
-}
+} */
 
 .carousel-background-1{
   background-image: url(./assets/images/background/health.jpg);
   background-size:cover;
   height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 
 .carousel-background-2{
@@ -85,4 +96,21 @@
   background-image: url(./assets/images/background/coach.png);
   background-size:cover;
   height: 30rem;
+}
+
+.thin-logo{
+  width: 20%;
+  margin: 0;
+  position: relative;
+  margin: 8rem auto 0 auto;
+}
+
+.carousel-slogan{
+  font-size: 38px;
+}
+
+.carousel-paragraph{
+  width: 50%;
+  margin: auto auto 1rem auto;
+  font-size: 20px;
 }

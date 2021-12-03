@@ -1,5 +1,5 @@
 
-/* PRODUCT STYLE*/
+/* PRODUCT(list) STYLE*/
 
 .product-container {
   width: 80%;
@@ -16,6 +16,7 @@
   cursor: pointer;
   border: 1px solid rgb(40, 44, 52, 0.3);
   transition: 0.4s ease;
+  text-align: center;
 }
 
 .product:hover {
@@ -33,4 +34,27 @@
 
 .product-detail {
   height: 7rem;
+}
+
+.product-detail-name {
+  margin: 1rem 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.product-detail-price {
+  margin: 5px 0;
+  text-align: center;
+  color:darkblue;
+}
+
+/* DATA CONTAINER(tables for admin site) STYLE*/
+
+.data-table-container{
+  width: 80%;
+  margin: 5rem auto 5rem auto;
+}
+
+.data-table{
+  margin: 5rem 0 5rem 0;
 }

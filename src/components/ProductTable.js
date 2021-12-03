@@ -28,7 +28,7 @@ class ProductTable extends React.Component {
         )
 
         return(
-            <Table striped bordered hover size="sm">
+            <Table striped bordered hover size="sm" className='data-table'>
                 <thead>
                     <tr>
                         <th>#</th>

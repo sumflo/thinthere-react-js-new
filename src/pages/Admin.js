@@ -6,7 +6,7 @@ import ProductTable from '../components/ProductTable';
 class Admin extends React.Component {
     render(){
         return (
-            <div>
+            <div className='data-table-container'>
                 <User />
                 <Order />
                 <ProductTable />

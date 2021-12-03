@@ -19,12 +19,12 @@ class Order extends React.Component {
                 {/* <td key={item.id}>{item.product}</td> */}
                 <td key={item.id}>{item.status}</td>
                 <td key={item.id}>{item.typeOfPayment}</td>
-                <td key={item.id}>{item.totalPrice}</td>
+                <td key={item.id}>{item.totalPrice.toLocaleString("en-US", {style: "currency", currency: "USD"})}</td>
             </tr>
         )
 
         return(
-            <Table striped bordered hover size="sm">
+            <Table striped bordered hover size="sm" className='data-table'>
                 <thead>
                     <tr>
                         <th>#</th>

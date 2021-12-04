@@ -16,7 +16,7 @@ class Order extends React.Component {
             <tr className='order-detail'>
                 <td key={item.id}>{item.id}</td>
                 <td key={item.id}>{item.user}</td>
-                {/* <td key={item.id}>{item.product}</td> */}
+                <td key={item.id}>{item.product.map(prod => prod.productName + ", ")}</td>
                 <td key={item.id}>{item.status}</td>
                 <td key={item.id}>{item.typeOfPayment}</td>
                 <td key={item.id}>{item.totalPrice.toLocaleString("en-US", {style: "currency", currency: "USD"})}</td>
@@ -29,7 +29,7 @@ class Order extends React.Component {
                     <tr>
                         <th>#</th>
                         <th>User</th>
-                        {/* <th>Products</th> */}
+                        <th>Products</th>
                         <th>Status</th>
                         <th>Payment</th>
                         <th>Total Price</th>
@@ -47,6 +47,11 @@ class Order extends React.Component {
         fetch('http://localhost:8080/orders', {headers: {Accept: 'application/json'}})
         .then(response => response.json())
         .then(data => this.setState({order: data}))
+    }
+
+    componentDidUpdate(){
+        console.log('Updated.')
+        console.log(this.state.order)
     }
 
 }

@@ -42,6 +42,7 @@ class Product extends React.Component {
         console.log(this.state.product)
     }
 
+
     componentWillUnmount(){}
 
 }

@@ -17,7 +17,7 @@ class ProductTable extends React.Component {
                     <td key={item.id}>{item.id}</td>
                     <td key={item.id}>{item.productName}</td>
                     <td key={item.id}>{item.category}</td>
-                    {/* <td key={item.id}>{item.typeOfProductList}</td> */}
+                    <td key={item.id}>{item.typeOfProductList.map(x=> x.name)}</td>
                     <td key={item.id}>{item.packaging}</td>
                     <td key={item.id}>{item.unitPrice.toLocaleString("en-US", {style: "currency", currency: "USD"})}</td>
                     <td key={item.id}>{item.description}</td>
@@ -34,7 +34,7 @@ class ProductTable extends React.Component {
                         <th>#</th>
                         <th>Product Name</th>
                         <th>Category</th>
-                        {/* <th>Type</th> */}
+                        <th>Type</th>
                         <th>Packaging</th>
                         <th>Unit Price</th>
                         <th>Description</th>
@@ -57,10 +57,10 @@ class ProductTable extends React.Component {
         .then(data => this.setState({product: data}))
     }
 
-    componentDidUpdate(){
+/*     componentDidUpdate(){
         console.log('Updated.')
         console.log(this.state.product)
-    }
+    } */
 
     componentWillUnmount(){}
 

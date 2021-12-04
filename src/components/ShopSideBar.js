@@ -2,7 +2,9 @@ import React from "react";
 
 function ShopSideBar(){
   return(
-  <div></div>
+  <div className="shop-side-bar-container">
+
+  </div>
   )
 }
 

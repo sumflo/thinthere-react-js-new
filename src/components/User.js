@@ -61,6 +61,11 @@ class User extends React.Component {
         .then(data => this.setState({user: data}))
     }
 
+    componentDidUpdate(){
+        console.log('Updated.')
+        console.log(this.state.user)
+    }
+
 }
 
 export default User;

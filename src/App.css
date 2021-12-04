@@ -120,19 +120,41 @@
   background-image: url(./assets/images/background/woman.jpg);
   background-size:cover;
   height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 
 .carousel-background-3{
   background-image: url(./assets/images/background/coach.png);
   background-size:cover;
   height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 
-.thin-logo{
+.thin-logo-1{
   width: 20%;
   margin: 0;
   position: relative;
   margin: 8rem auto 0 auto;
+}
+
+.thin-logo-2{
+  width: 20%;
+  margin: 0;
+  position: relative;
+  margin: 13.5rem auto 0 auto;
+}
+
+.thin-logo-3{
+  width: 20%;
+  margin: 0;
+  position: relative;
+  margin: 12rem auto 0 auto;
 }
 
 .carousel-slogan{

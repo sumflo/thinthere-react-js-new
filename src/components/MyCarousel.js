@@ -8,7 +8,7 @@ function MyCarousel() {
     return(
         <Carousel variant="dark" className="carousel-box">
             <Carousel.Item className="carousel-background-1">
-                <div className="thin-logo">
+                <div className="thin-logo-1">
                     <img
                     className="d-block w-100"
                     src={logo}
@@ -24,6 +24,13 @@ function MyCarousel() {
             </Carousel.Item>
 
             <Carousel.Item className="carousel-background-2">
+                <div className="thin-logo-2">
+                    <img
+                    className="d-block w-100"
+                    src={logo}
+                    alt="Second slide"
+                    />
+                </div>
                 <Carousel.Caption>
                 <h5 className="carousel-slogan">Be fit, click!</h5>
                 <p className="carousel-paragraph">Home delivery within 3 working days.</p>
@@ -31,6 +38,13 @@ function MyCarousel() {
             </Carousel.Item>
 
             <Carousel.Item className="carousel-background-3">
+                <div className="thin-logo-3">
+                    <img
+                    className="d-block w-100"
+                    src={logo}
+                    alt="Third slide"
+                    />
+                </div>
                 <Carousel.Caption>
                 <h5 className="carousel-slogan">Save time!</h5>
                 <p className="carousel-paragraph">A few clicks and you can start your home workout with the</p>

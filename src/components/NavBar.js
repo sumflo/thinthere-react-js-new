@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Navbar } from 'react-bootstrap'
 import { Container } from 'react-bootstrap'
@@ -5,11 +6,12 @@ import { Nav } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
 import { FormControl } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
+import { faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 
 function NavBar(){
     return(
-        <Navbar expand="lg" bg="light" variant="light">
-            <Container className="navbar-container">
+        <Navbar id="navbar" expand="lg" bg="light" variant="light">
+            <Container className="navbar-container" >
                 <Navbar.Brand>thinThere</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -29,6 +31,10 @@ function NavBar(){
                         />
                         <Button variant="outline-secondary">Search</Button>
                     </Form>
+                    <div className="cart-holder">
+                    <FontAwesomeIcon id="cart-icon" icon={faShoppingCart}/>
+                    <p className="cart-counter">0</p>
+                    </div>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

@@ -4,10 +4,11 @@ import { faUtensils} from '@fortawesome/free-solid-svg-icons'
 
 export const ShopSideBarData = [
     {
-        title: 'BodyShop',
+        title: 'Category',
         path: '/',
         shopItems: [
             {
+            box: <input type="checkbox" />,
             title: 'AllProducts',
             path: '/'
             },

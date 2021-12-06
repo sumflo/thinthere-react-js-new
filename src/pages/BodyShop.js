@@ -1,7 +1,7 @@
 import React from 'react'
 import Product from '../components/Product'
 import ShopBar from '../components/ShopBar';
-import Example from '../components/ShopSideBar';
+import ShopSideBar from '../components/ShopSideBar';
 
 class BodyShop extends React.Component {
     render(){
@@ -9,7 +9,7 @@ class BodyShop extends React.Component {
             <div className="shop-container">
                 <ShopBar />
                 <div className="shop-main-container">
-                    <Example/>
+                    <ShopSideBar />
                     <Product />
                 </div>
             </div>

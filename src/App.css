@@ -1,22 +1,63 @@
 /* NAVBAR STYLE*/
 
+#basic-navbar-nav{
+align-items: center;
+justify-content: center;
+}
+
 .flex-margin{
   display: flex;
-  margin-left: 42%;
+  margin-left: 40%;
 }
 
 .me-2{
   margin-right: 0rem;
 }
 
+.cart-holder{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+}
+
+#cart-icon{
+  font-size: xx-large;
+  color: #66B2FF;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.cart-counter{
+  display: block;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+}
+
+
 /* BODY-SHOP NAVBAR STYLE*/
 
 .body-shop-navbar{
-  width: 70%;
+  width: 100%;
   margin: 0 auto 0 auto;
   display: flex;
   flex-direction: row-reverse;
-  background-color: palegreen;
+  background-color: #66B2FF;
+}
+
+#body-shop-navbar-nav{
+  margin-right: 3%;
+}
+
+#basic-nav-dropdown{
+  color: #404040;
+  font-size: large;
+  font-weight: 400;
+}
+
+#list-icon{
+  color: #404040;
 }
 
 .dropdown-section {
@@ -28,6 +69,16 @@
     background-color:#fff;
   }
 }
+
+/* BODY-SHOP CONTENT STYLE*/
+
+.shop-main-container{
+  display: flex;
+  flex-direction: row;
+  width:85%;
+  margin: 0 auto 0 auto
+}
+
 
 /* PRODUCT(list) STYLE*/
 
@@ -78,17 +129,6 @@
   margin: 5px 0;
   text-align: center;
   color:darkblue;
-}
-
-/* DATA CONTAINER(tables for admin site) STYLE*/
-
-.data-table-container{
-  width: 70%;
-  margin: 5rem auto 5rem auto;
-}
-
-.data-table{
-  margin: 5rem 0 5rem 0;
 }
 
 /* MY CAROUSEL STYLE*/
@@ -166,3 +206,114 @@
   margin: auto auto 1rem auto;
   font-size: 20px;
 }
+
+/* BODYSHOP SIDEBAR STYLE*/
+
+.side-bar-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 12rem;
+  white-space: pre-wrap;
+  height: auto;
+  margin-top: 5rem;
+}
+#side-bar-dropdown-1{
+  position: relative;
+  border: none;
+  margin:0;
+}
+
+#side-bar-dropdown-1 :hover{
+  font-weight: bold;
+  background-color: white;
+}
+
+#side-bar-dropdown-header-1{
+  color: #66B2FF;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#side-bar-dropdown-2{
+  position: relative;
+  border: none;
+  margin:0;
+}
+
+#side-bar-dropdown-2 :hover{
+  font-weight: bold;
+  background-color: white;
+}
+
+#side-bar-dropdown-header-2{
+  color: #66B2FF;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.side-bar-dropdown-item{
+  height: auto;
+  word-wrap: break-word;
+  display: block;
+}
+
+/* ADMIN SIDEBAR STYLE*/
+
+#side-bar-dropdown-admin{
+  position: relative;
+  border: none;
+  margin:0;
+}
+
+#side-bar-dropdown-admin :hover{
+  font-weight: bold;
+  background-color: white;
+}
+
+/* ADMIN MAIN CONTENT STYLE*/
+
+.admin-main-container{
+  display: flex;
+  flex-direction: row;
+  width:85%;
+  margin: 0 auto 0 auto
+}
+
+/* DATA CONTAINER(tables for admin site) STYLE*/
+
+.data-table-container{
+  width: 70%;
+  margin: 0 auto 5rem auto;
+}
+
+.data-table{
+  margin: 5rem 0 5rem 0;
+}
+
+/* ADMIN NAVBAR STYLE*/
+
+.admin-navbar{
+  background-color: #66B2FF;
+}
+
+#admin-nav-dropdown{
+  color: #404040;
+  font-size: large;
+  font-weight: 400;
+}
+
+.dropdown-section {
+  margin-right: 1rem;
+}
+
+@media (max-width:767px) {
+  .dropdown-title {
+    background-color:#fff;
+  }
+}
+
+.admin-search{
+  display: flex;
+  margin-left: 43%;
+}
+

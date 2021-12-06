@@ -16,14 +16,20 @@ class ProductTable extends React.Component {
                 <tr className='product-detail-table'>
                     <td key={item.id}>{item.id}</td>
                     <td key={item.id}>{item.productName}</td>
-                    <td key={item.id}>{item.category}</td>
-                    <td key={item.id}>{item.typeOfProductList.map(x=> x.name)}</td>
+                    <td key={item.id}>{item.category.split("_").map((word) => word + " ")}</td>
+                    <td key={item.id}>
+                        {item.typeOfProductList.map((x) =>
+                            x.name.split("_").length < 2
+                            ? x.name.split("_")[0] + ", "
+                            : x.name.split("_")[0] + " " + x.name.split("_")[1] + ", "
+                        )}
+                    </td>
                     <td key={item.id}>{item.packaging}</td>
                     <td key={item.id}>{item.unitPrice.toLocaleString("en-US", {style: "currency", currency: "USD"})}</td>
                     <td key={item.id}>{item.description}</td>
                     <td key={item.id}>{item.inStock}</td>
-                    <td key={item.id}>{item.createDate}</td>
-                    <td key={item.id}>{item.lastUpdate}</td>
+                    <td key={item.id}>{item.createDate.split("T")[0]}</td>
+                    <td key={item.id}>{item.lastUpdate.split("T")[0]}</td>
                 </tr>
         )
 
@@ -57,10 +63,10 @@ class ProductTable extends React.Component {
         .then(data => this.setState({product: data}))
     }
 
-/*     componentDidUpdate(){
+    componentDidUpdate(){
         console.log('Updated.')
         console.log(this.state.product)
-    } */
+    } 
 
     componentWillUnmount(){}
 

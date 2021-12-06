@@ -1,5 +1,9 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import { Button } from 'react-bootstrap'
 
 class Order extends React.Component {
 
@@ -20,25 +24,34 @@ class Order extends React.Component {
                 <td key={item.id}>{item.status}</td>
                 <td key={item.id}>{item.typeOfPayment}</td>
                 <td key={item.id}>{item.totalPrice.toLocaleString("en-US", {style: "currency", currency: "USD"})}</td>
+                <td className="data-table-icon-holder edit-table"><FontAwesomeIcon icon={faPencilAlt}/></td>
+                <td className="data-table-icon-holder delete-table"><FontAwesomeIcon icon={faTrash}/></td>
             </tr>
         )
 
         return(
-            <Table striped bordered hover size="sm" className='data-table'>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>User</th>
-                        <th>Products</th>
-                        <th>Status</th>
-                        <th>Payment</th>
-                        <th>Total Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {orderList}
-                </tbody>
-            </Table>
+            <div>
+                <Table striped bordered hover size="sm" className='data-table'>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>User</th>
+                            <th>Products</th>
+                            <th>Status</th>
+                            <th>Payment</th>
+                            <th>Total Price</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {orderList}
+                    </tbody>
+                </Table>
+                <div className="add-new-button-holder">
+                    <Button as="input" type="submit" value="Add new" variant="outline-secondary"/>{' '}
+                </div>
+            </div>
         );
     }
 

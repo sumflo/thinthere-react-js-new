@@ -5,6 +5,7 @@ import { NavDropdown } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
 import { FormControl } from 'react-bootstrap'
+import { faSearch} from '@fortawesome/free-solid-svg-icons'
 
 function AdminNavBar(){
     return(
@@ -37,7 +38,7 @@ function AdminNavBar(){
                             className="me-2"
                             aria-label="Search"
                             />
-                            <Button variant="outline-secondary">Go!</Button>
+                            <Button variant="outline-secondary">Search!</Button>
                         </Form>
 
                     </Navbar.Collapse>

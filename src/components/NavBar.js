@@ -18,8 +18,8 @@ function NavBar(){
                     <Nav>
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/bodyShop">BodyShop</Nav.Link>
-                        <Nav.Link href="">Sign In</Nav.Link>
-                        <Nav.Link href="">Join Us</Nav.Link>
+                        <Nav.Link href="/signIn">Sign In</Nav.Link>
+                        <Nav.Link href="/joinUs">Join Us</Nav.Link>
                         <Nav.Link href="/admin">Admin</Nav.Link>
                     </Nav>
                     <Form className="flex-margin">

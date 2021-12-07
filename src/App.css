@@ -339,3 +339,41 @@ justify-content: center;
   margin-left: 45%;
 }
 
+/* REGISTRATION STYLE*/
+
+.registration-form-container{
+  width: 60%;
+  margin: 5rem auto 5rem auto;
+}
+
+.registration-form-holder{
+  margin: 0rem 2rem 5rem 2rem;
+}
+
+.join-us-title-holder{
+  margin-bottom: 2rem;
+}
+
+.join-us-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #66B2FF;
+  height: 5rem;
+}
+
+#form-submit-button{
+  color: white;
+  background-color: #66B2FF;
+  border-color: #66B2FF;
+}
+
+.form-submit-button-holder{
+  text-align: right;
+}
+
+#form-submit-button:hover{
+  background-color: #2581dd;
+  border-color: #2581dd;
+}

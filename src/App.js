@@ -9,6 +9,8 @@ import MyCarousel from './components/MyCarousel'
 import Index from './pages/Index'
 import Admin from './pages/Admin'
 import BodyShop from './pages/BodyShop'
+import JoinUs from './pages/JoinUs'
+import SignIn from './pages/SignIn'
 
 function App () {
     return (
@@ -25,6 +27,14 @@ function App () {
 
               <Route path="/bodyShop">
                 <BodyShop />
+              </Route>
+
+              <Route path="/signIn">
+                <SignIn />
+              </Route>
+
+              <Route path="/joinUs">
+                <JoinUs />
               </Route>
 
               <Route path="/admin">

@@ -18,7 +18,7 @@ class Product extends React.Component {
                 <div className='product-detail'>
                     <h4 key={item.id} className='product-detail-name'>{item.productName}</h4>
                     {/* <p key={item.id} className=''>{item.description}</p> */}
-                    <p key={item.id} className='product-detail-price'>{item.unitPrice.toLocaleString("en-US", {style: "currency", currency: "USD"})}</p>
+                    <p key={item.id} className='product-detail-price'>{item.unitPrice.toLocaleString("de-DE", {style: "currency", currency: "eur"})}</p>
                 </div>
             </div>
         )

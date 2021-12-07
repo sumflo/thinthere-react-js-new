@@ -23,7 +23,7 @@ class Order extends React.Component {
                 <td key={item.id}>{item.product.map(prod => prod.productName + ", ")}</td>
                 <td key={item.id}>{item.status}</td>
                 <td key={item.id}>{item.typeOfPayment}</td>
-                <td key={item.id}>{item.totalPrice.toLocaleString("en-US", {style: "currency", currency: "USD"})}</td>
+                <td key={item.id}>{item.totalPrice.toLocaleString("de-DE", {style: "currency", currency: "eur"})}</td>
                 <td className="data-table-icon-holder edit-table"><FontAwesomeIcon icon={faPencilAlt}/></td>
                 <td className="data-table-icon-holder delete-table"><FontAwesomeIcon icon={faTrash}/></td>
             </tr>

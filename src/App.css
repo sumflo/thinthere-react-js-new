@@ -377,3 +377,39 @@ justify-content: center;
   background-color: #2581dd;
   border-color: #2581dd;
 }
+
+/* Login STYLE*/
+
+.login-form-container{
+  width: 45%;
+  margin: 5rem auto 5rem auto;
+}
+
+.login-title-holder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #66B2FF;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
+
+#login-button{
+  color: white;
+  font-size: large;
+  background-color: #66B2FF;
+  border-color: #66B2FF;
+}
+
+#login-button:hover{
+  background-color: #2581dd;
+  border-color: #2581dd;
+}
+
+.login-button-holder{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+

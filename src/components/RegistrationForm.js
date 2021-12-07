@@ -8,8 +8,8 @@ import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
 
 class RegistrationForm extends React.Component {
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             username: "",
             firstName: "",
@@ -20,8 +20,8 @@ class RegistrationForm extends React.Component {
             city: "",
             address: "",
             houseNumber: "",
-            phoneNumber: "",
-            isSubscribed: false
+            phoneNumber: ""
+            /* isSubscribed: false */
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -40,12 +40,30 @@ class RegistrationForm extends React.Component {
     } */
 
     handleSubmit(event){
-
+        event.preventDefault()
         alert('A form was submitted: ' + this.state);
 
-        fetch('http://localhost:8080/register', {headers: {Accept: 'application/json'}})
+        fetch('http://localhost:8080/register', {
+            method:"POST", 
+            headers: {
+                Accept: 'application/json'
+                /* 'Content-Type':'application/json' */
+            },
+            body: JSON.stringify({
+                username: this.state.username,
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                password: this.state.password,
+                country: this.state.country,
+                postalCode: this.state.postalCode,
+                city: this.state.city,
+                address: this.state.address,
+                houseNumber: this.state.houseNumber,
+                phoneNumber: this.state.phoneNumber
+            })
+        })
         .then(response => response.json())
-        
+        .then(data => console.log(data))
     }
 
     render(){

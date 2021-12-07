@@ -27,20 +27,25 @@ class RegistrationForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-/*     handleChange(event){
+    handleChange(event){
         const {name, value} = event.target
         this.setState({
             [name]: value
         })
-    } */
-
-    handleChange(event){
-        const {name, value, type, checked} = event.target
-        type === "checked" ? this.setState({ [name]: checked }) : this.setState ({ [name]: value })
     }
 
+/*     handleChange(event){
+        const {name, value, type, checked} = event.target
+        type === "checked" ? this.setState({ [name]: checked }) : this.setState ({ [name]: value })
+    } */
+
     handleSubmit(event){
-        event.preventDefault()
+
+        alert('A form was submitted: ' + this.state);
+
+        fetch('http://localhost:8080/register', {headers: {Accept: 'application/json'}})
+        .then(response => response.json())
+        
     }
 
     render(){
@@ -117,7 +122,7 @@ class RegistrationForm extends React.Component {
                         </Row>
 
                         <Form.Group className="mb-3" id="formGridSubscribe">
-                            <Form.Check type="checkbox" name="isSubscribed" checked={this.state.isSubscribed} onChange={this.handleChange} label="Subscribe to our newsletter" />
+                            <Form.Check type="checkbox" /* name="isSubscribed" checked={this.state.isSubscribed} onChange={this.handleChange} */ label="Subscribe to our newsletter" />
                         </Form.Group>
 
                         <div className="form-submit-button-holder">

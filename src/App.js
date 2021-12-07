@@ -33,8 +33,7 @@ function App () {
                 <SignIn />
               </Route>
 
-              <Route path="/joinUs">
-                <JoinUs />
+              <Route path="/joinUs" render={props => <JoinUs {...props} />}>
               </Route>
 
               <Route path="/admin">
@@ -43,7 +42,6 @@ function App () {
 
             </Switch>
           </div>
-
         </div>
       </Router>
     );

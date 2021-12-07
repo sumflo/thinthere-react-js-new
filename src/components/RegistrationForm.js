@@ -46,8 +46,8 @@ class RegistrationForm extends React.Component {
         fetch('http://localhost:8080/register', {
             method:"POST", 
             headers: {
-                Accept: 'application/json'
-                /* 'Content-Type':'application/json' */
+                Accept: 'application/json',
+                'Content-Type':'application/json'
             },
             body: JSON.stringify({
                 username: this.state.username,
@@ -62,8 +62,9 @@ class RegistrationForm extends React.Component {
                 phoneNumber: this.state.phoneNumber
             })
         })
-        .then(response => response.json())
-        .then(data => console.log(data))
+        .then(()=> this.props.history.replace("/signIn"))
+/*         .then(response => response.json())
+        .then(data => console.log(data)) */
     }
 
     render(){

@@ -3,9 +3,10 @@ import RegistrationForm from '../components/RegistrationForm';
 
 class JoinUs extends React.Component {
     render(){
+        console.log(this.props)
         return (
             <div className="registration-form-container">
-                <RegistrationForm />
+                <RegistrationForm  history={this.props.history} />
                 
             </div>
         );

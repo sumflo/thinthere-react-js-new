@@ -11,10 +11,21 @@ import Admin from './pages/Admin'
 import BodyShop from './pages/BodyShop'
 import JoinUs from './pages/JoinUs'
 import SignIn from './pages/SignIn'
+import {AuthContext} from './context/AuthContext'
 
-function App () {
+class App extends React.Component {
+
+  constructor(props){
+    super(props)
+    this.state = {
+      user: null
+    }
+  }
+
+  render(){
     return (
       <Router>
+        <AuthContext.Provider value={{user: this.state.user, setUser:(user)=> this.setState({"user": user})}}>
         <div className="App">
           <NavBar />
           <div className="contents">
@@ -26,7 +37,7 @@ function App () {
               </Route>
 
               <Route path="/bodyShop">
-                <BodyShop />
+                 <RequireAuth /> 
               </Route>
 
               <Route path="/signIn">
@@ -43,8 +54,27 @@ function App () {
             </Switch>
           </div>
         </div>
+        </AuthContext.Provider>
       </Router>
     );
+  }
 }
+
+class RequireAuth extends React.Component {
+  render(){
+
+    console.log(this.context)
+    if(this.context.user == null){
+      alert("You are not logged in")
+      return null
+    }
+
+    return <button onClick={()=> fetch("http://localhost:8080/get", {headers: {"thinThere-token": this.context.user.token}}).then(response => response.text()).then(data => console.log(data))}>Login</button>
+  }
+}
+
+
+
+RequireAuth.contextType = AuthContext
 
 export default App;

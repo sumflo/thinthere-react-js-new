@@ -7,6 +7,7 @@ import { Form } from 'react-bootstrap'
 import { FormControl } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import { faShoppingCart} from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 function NavBar(){
     return(
@@ -16,11 +17,11 @@ function NavBar(){
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/bodyShop">BodyShop</Nav.Link>
-                        <Nav.Link href="/signIn">Sign In</Nav.Link>
-                        <Nav.Link href="/joinUs">Join Us</Nav.Link>
-                        <Nav.Link href="/admin">Admin</Nav.Link>
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/bodyShop">BodyShop</Nav.Link>
+                        <Nav.Link as={Link} to="/signIn">Sign In</Nav.Link>
+                        <Nav.Link as={Link} to="/joinUs">Join Us</Nav.Link>
+                        <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
                     </Nav>
                     <Form className="flex-margin">
                         <FormControl

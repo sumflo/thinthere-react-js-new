@@ -2,8 +2,6 @@ import React from "react";
 import {AuthContext} from '../context/AuthContext'
 
 import { Form } from 'react-bootstrap'
-import { Row } from 'react-bootstrap'
-import { Col } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 
 class Login extends React.Component {
@@ -33,11 +31,29 @@ class Login extends React.Component {
             }
         )
         .then(response => response.json())
-        .then(tokenData => this.context.setUser({token: tokenData.token}))
+        .then(tokenData => {
+            /* this.context.setUser({token: tokenData.token}) */
+            if(data.username == 'admin@admin.com'){
+                    this.props.history.replace('/admin')
+                }else{
+                    this.props.history.replace('/account')
+                }
+            }
+        )
 
-        console.log(this.context)
+        /* .then(data => {
+            if(data.status == 200 && role == 'ROLE_USER'){
+                this.props.history.replace("/userAccount")
+            } else if(data.status == 200 && role == 'ROLE_ADMIN'){
+                this.props.history.replace("/admin")
+                }
+        }
+            */
 
-        alert(42)
+        /* console.log(this.context)
+        
+
+        alert(42) */
     }
 
     render(){

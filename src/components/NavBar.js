@@ -8,8 +8,13 @@ import { FormControl } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import { faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../context/AuthContext'
 
 function NavBar(){
+
+    let context = React.useContext(AuthContext)
+    console.log(context)
+
     return(
         <Navbar id="navbar" expand="lg" bg="light" variant="light">
             <Container className="navbar-container" >
@@ -21,7 +26,7 @@ function NavBar(){
                         <Nav.Link as={Link} to="/bodyShop">BodyShop</Nav.Link>
                         <Nav.Link as={Link} to="/signIn">Sign In</Nav.Link>
                         <Nav.Link as={Link} to="/joinUs">Join Us</Nav.Link>
-                        <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
+                        { context.user?.username == "admin@admin.com" && <Nav.Link as={Link} to="/admin">Admin</Nav.Link> }
                     </Nav>
                     <Form className="flex-margin">
                         <FormControl

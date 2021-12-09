@@ -11,6 +11,7 @@ import Admin from './pages/Admin'
 import BodyShop from './pages/BodyShop'
 import JoinUs from './pages/JoinUs'
 import SignIn from './pages/SignIn'
+import UserAccount from './pages/UserAccount'
 import {AuthContext} from './context/AuthContext'
 
 class App extends React.Component {
@@ -37,14 +38,18 @@ class App extends React.Component {
               </Route>
 
               <Route path="/bodyShop">
-                 <RequireAuth /> 
+                 <RequireAuth />
+                 <BodyShop/> 
               </Route>
 
-              <Route path="/signIn">
-                <SignIn />
+              <Route path="/signIn" render={props => <SignIn {...props} />}>
               </Route>
 
               <Route path="/joinUs" render={props => <JoinUs {...props} />}>
+              </Route>
+
+              <Route path="/account">
+                <UserAccount />
               </Route>
 
               <Route path="/admin">

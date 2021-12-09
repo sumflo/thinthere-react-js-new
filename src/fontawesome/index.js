@@ -4,7 +4,11 @@ import { faUtensils} from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 import { faTrash} from '@fortawesome/free-solid-svg-icons'
 import { faPencilAlt} from '@fortawesome/free-solid-svg-icons'
-import { faSearch} from '@fortawesome/free-solid-svg-icons'
+import { faFacebook} from '@fortawesome/free-solid-svg-icons'
+import { faAt} from '@fortawesome/free-solid-svg-icons'
+import { faInstagram} from '@fortawesome/free-solid-svg-icons'
+import { faTwitter} from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
 
 library.add(
     faListUl,
@@ -12,5 +16,10 @@ library.add(
     faShoppingCart,
     faTrash,
     faPencilAlt,
-    faSearch
+    faSearch,
+    faFacebook,
+    faAt,
+    faInstagram,
+    faTwitter,
+    faMapMarkerAlt
   )
